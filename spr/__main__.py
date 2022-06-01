@@ -48,17 +48,17 @@ async def help_command(_, message: Message):
         return await message.reply("Pm Me For Help", reply_markup=kb)
     kb = ikb(
         {
-            "Help": "bot_commands",
-            "Repo": "https://github.com/TheHamkerCat/SpamProtectionRobot",
-            "Add Me To Your Group": f"https://t.me/{BOT_USERNAME}?startgroup=new",
-            "Support Chat (for now)": "https://t.me/WBBSupport",
+            "ʜᴇʟᴘ": "bot_commands",
+            "ᴏᴡɴᴇʀ": "https://t.me/hnyop",
+            "+ᴀᴅᴅ ᴍᴇ+": f"https://t.me/{BOT_USERNAME}?startgroup=new",
+            "ꜱᴜᴘᴘᴏʀᴛ": "https://t.me/chatroom_xd",
         }
     )
     mention = message.from_user.mention
     await message.reply_photo(
         "https://hamker.me/logo_3.png",
-        caption=f"Hi {mention}, I'm SpamProtectionRobot,"
-        + " Choose An Option From Below.",
+        caption=f"ʜɪ {mention}, ɪ'ᴍ ꜱᴘᴀᴍ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ,"
+        + " ᴄʜᴏᴏꜱᴇ ᴀɴ ᴏᴘᴛɪᴏɴ ꜰʀᴏᴍ ʙᴇʟᴏᴡ.",
         reply_markup=kb,
     )
 
@@ -83,9 +83,9 @@ async def help_parser(name, keyboard=None):
             paginate_modules(0, HELPABLE, "help")
         )
     return (
-        f"Hello {name}, I'm SpamProtectionRobot, I can protect "
-        + "your group from Spam and NSFW media using "
-        + "machine learning. Choose an option from below.",
+        f"ʜᴇʟʟᴏ {name}, ɪ'ᴍ ꜱᴘᴀᴍ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ, ɪ ᴄᴀɴ ᴘʀᴏᴛᴇᴄᴛ "
+        + "ʏᴏᴜʀ ɢʀᴏᴜᴘ ꜰʀᴏᴍ ꜱᴘᴀᴍ ᴀɴᴅ ɴꜱꜰᴡ ᴍᴇᴅɪᴀ ᴜꜱɪɴɢ"
+        + "ᴍᴀᴄʜɪɴᴇ ʟᴇᴀʀɴɪɴɢ. ᴄʜᴏᴏꜱᴇ ᴀɴ ᴏᴘᴛɪᴏɴ ꜰʀᴏᴍ ʙᴇʟᴏᴡ.",
         keyboard,
     )
 
@@ -99,15 +99,15 @@ async def help_button(client, query: CallbackQuery):
     create_match = re.match(r"help_create", query.data)
     u = query.from_user.mention
     top_text = (
-        f"Hello {u}, I'm SpamProtectionRobot, I can protect "
-        + "your group from Spam and NSFW media using "
-        + "machine learning. Choose an option from below."
+        f"ʜᴇʟʟᴏ {u}, ɪ'ᴍ ꜱᴘᴀᴍ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ, ɪ ᴄᴀɴ ᴘʀᴏᴛᴇᴄᴛ "
+        + "ʏᴏᴜʀ ɢʀᴏᴜᴘ ꜰʀᴏᴍ ꜱᴘᴀᴍ ᴀɴᴅ ɴꜱꜰᴡ ᴍᴇᴅɪᴀ ᴜꜱɪɴɢ "
+        + "ᴍᴀᴄʜɪɴᴇ ʟᴇᴀʀɴɪɴɢ. ᴄʜᴏᴏꜱᴇ ᴀɴ ᴏᴘᴛɪᴏɴ ꜰʀᴏᴍ ʙᴇʟᴏᴡ."
     )
     if mod_match:
         module = mod_match.group(1)
         text = (
             "{} **{}**:\n".format(
-                "Here is the help for", HELPABLE[module].__MODULE__
+                "ʜᴇʀᴇ ɪꜱ ᴛʜᴇ ʜᴇʟᴘ ꜰᴏʀ", HELPABLE[module].__MODULE__
             )
             + HELPABLE[module].__HELP__
         )
