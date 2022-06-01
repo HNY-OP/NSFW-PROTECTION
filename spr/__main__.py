@@ -56,7 +56,7 @@ async def help_command(_, message: Message):
     )
     mention = message.from_user.mention
     await message.reply_photo(
-        "https://hamker.me/logo_3.png",
+        "https://telegra.ph/file/d1ff543448568b9542f96.jpg",
         caption=f"ʜɪ {mention}, ɪ'ᴍ ꜱᴘᴀᴍ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ,"
         + " ᴄʜᴏᴏꜱᴇ ᴀɴ ᴏᴘᴛɪᴏɴ ꜰʀᴏᴍ ʙᴇʟᴏᴡ.",
         reply_markup=kb,
@@ -83,7 +83,7 @@ async def help_parser(name, keyboard=None):
             paginate_modules(0, HELPABLE, "help")
         )
     return (
-        f"ʜᴇʟʟᴏ {name}, ɪ'ᴍ ꜱᴘᴀᴍ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ, ɪ ᴄᴀɴ ᴘʀᴏᴛᴇᴄᴛ "
+        f"ʜᴇʟʟᴏ {name}, ɪ'ᴍ ᴀɴᴛɪʀᴀɪᴅ, ɪ ᴄᴀɴ ᴘʀᴏᴛᴇᴄᴛ "
         + "ʏᴏᴜʀ ɢʀᴏᴜᴘ ꜰʀᴏᴍ ꜱᴘᴀᴍ ᴀɴᴅ ɴꜱꜰᴡ ᴍᴇᴅɪᴀ ᴜꜱɪɴɢ"
         + "ᴍᴀᴄʜɪɴᴇ ʟᴇᴀʀɴɪɴɢ. ᴄʜᴏᴏꜱᴇ ᴀɴ ᴏᴘᴛɪᴏɴ ꜰʀᴏᴍ ʙᴇʟᴏᴡ.",
         keyboard,
@@ -99,7 +99,7 @@ async def help_button(client, query: CallbackQuery):
     create_match = re.match(r"help_create", query.data)
     u = query.from_user.mention
     top_text = (
-        f"ʜᴇʟʟᴏ {u}, ɪ'ᴍ ꜱᴘᴀᴍ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ, ɪ ᴄᴀɴ ᴘʀᴏᴛᴇᴄᴛ "
+        f"ʜᴇʟʟᴏ {u}, ɪ'ᴍ ᴀɴᴛɪʀᴀɪᴅ, ɪ ᴄᴀɴ ᴘʀᴏᴛᴇᴄᴛ "
         + "ʏᴏᴜʀ ɢʀᴏᴜᴘ ꜰʀᴏᴍ ꜱᴘᴀᴍ ᴀɴᴅ ɴꜱꜰᴡ ᴍᴇᴅɪᴀ ᴜꜱɪɴɢ "
         + "ᴍᴀᴄʜɪɴᴇ ʟᴇᴀʀɴɪɴɢ. ᴄʜᴏᴏꜱᴇ ᴀɴ ᴏᴘᴛɪᴏɴ ꜰʀᴏᴍ ʙᴇʟᴏᴡ."
     )
